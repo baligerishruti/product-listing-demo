@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Product Listing Page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <a href="javascript:void(0);" onclick="onClickOfHambergMenu()">
+                <i class="fa fa-bars"></i>
+              </a>
+            <!-- <div>Product Listing Page</div> -->
+            <div class="navBar">
+                <a href="#home" class="active">Home</a>
+                <a href="#Women" (click)="categoryFilters()">Women</a>
+                <a href="#Men">Men</a>
+            </div>
+            <div>
+                <img width="34" height="34" src="https://img.icons8.com/external-febrian-hidayat-flat-febrian-hidayat/64/external-11-hobbies-and-interest-febrian-hidayat-flat-febrian-hidayat.png" alt="external-11-hobbies-and-interest-febrian-hidayat-flat-febrian-hidayat"/>
+            </div>
+        </header>
+        <div class="header">
+            <img src="https://static.vecteezy.com/system/resources/previews/011/871/813/non_2x/online-shopping-on-phone-buy-sell-business-digital-web-banner-application-money-advertising-payment-ecommerce-illustration-search-vector.jpg"/>
+        </div>
+        <div class="main">
+            <div class="filterBox">
+                <h3>Filters</h3>
+                <hr>
+                <br>
+                <h4>
+                    Category
+                </h4>
+                <div class="categoryList">
+                </div>
+            </div>
+            <div class="productBlock">
+                <div class="sortBlock">
+                    <p class="listLength"></p>
+                    <div>
+                        <input type="text" placeholder="Search Here.." class="searchBlock" onkeyup="searchItemVal()" class="searchBox"/>
+                    </div>
+                    <div>
+                        <select id="sorting" onchange="sortItems()">
+                            <option selected>Sort By</option>
+                            <option value="price-asc">Price : low to high</option>
+                            <option value="price-dsc">Price : high to low</option>
+                            <option value="rate-asc">Rate: low to high</option>
+                            <option value="rate-dsc">Rate : high to low</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="product">
+                </div>
+
+                <div class="paginationContainer">
+                    <div class="button">
+                        <button class="btn left prev"><span><i class="fa fa-angle-left" aria-hidden="true"></i></span></button>
+                        <button class="btn left next"><span><i class="fa fa-angle-right" aria-hidden="true"></i></span></button>
+                      </div>
+                 </div>
+            </div>
+        </div>
+        <div class="itemModal modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Some text in the Modal..</p>
+            </div>
+        </div>
+        <footer>
+            Pen by <a href="https://www.jemimaabu.com" target="_blank" rel="noopener">Shruti B</a>
+          </footer>
+    </body>
+    <script src="productListing.js"></script>
+</html>
